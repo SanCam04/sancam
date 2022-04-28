@@ -1,0 +1,83 @@
+// euler
+
+import java.util.Scanner;
+
+/**
+ * euler
+ */
+public class euler {
+
+       private static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);  
+
+           System.out.print("Hasta que valor de euler desea hacer el calculo : ");
+           int n=sc.nextInt();
+
+           System.out.print("e = " + e (n));
+       }
+       public static double e(int n) {
+           double s =0 ,t;
+           for (int i = 0; i < n; i++) {
+               t = 1/factorial(i);
+               s += t;
+           }
+           return s;
+       }
+       public static double factorial(int n) {
+           double aux=1;
+           for (int i = 2; i <= n; i++) {
+               aux *= i;   
+           }
+           return aux;
+       }
+    }
+
+
+//promedio notas 60% y 40%
+
+import java.util.Scanner;
+
+/**
+ * promnot
+ */
+public class promnot {
+
+    public static void main(String[] args) {
+         
+        Scanner sc=new Scanner(System.in);
+        
+        
+        int hasta;
+
+        System.out.println("ingrese el total de estudiantes ");
+        hasta=sc.nextInt();
+        System.out.println("el total de estudiantes es de:  "+hasta);
+      
+        
+        for (int i = 0; i < hasta; i++) {
+            
+
+            Scanner t=new Scanner(System.in);
+            System.out.println("ingrese la nota teorica del estudiante sobre 5");
+
+            int teori=t.nextInt();
+            int promedioteo=(teori*60)/5;
+            System.out.println("el promedio de la nota teorica es de: "+promedioteo);
+            
+            Scanner p=new Scanner(System.in);
+            System.out.println("ingrese la nota practica del estudiante sobre 5");
+            int practica=p.nextInt();
+            int promediopra=(practica*40)/5;
+            System.out.println("el promedio de la nota practica es de: "+promediopra);
+
+            int tota=promedioteo+promediopra;
+            System.out.println("el total del promedio es de: "+tota);
+
+            
+            
+        }
+        
+        
+    }
+}
